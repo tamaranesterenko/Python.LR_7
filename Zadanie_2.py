@@ -12,9 +12,8 @@ if __name__ == '__main__':
     print(f"Максимальное число: {max(a)}")
     b = list(filter(lambda x: x<0, a))
     print(f"Сумма отрициательных элементов: {sum(b)}")
-    for item in a:
-        if not c_1 < abs(item) > c_2:
-            d.append(item)
-    while len(d) != len(a):
-        d.append(0)
+    d = list(filter(lambda x: c_1 < x < c_2, a))
+    print('d = {}\n'.format(d))
+    while len(a) != len(d):
+        d.extend('0')
     print(f"Новый массив: {d}")
