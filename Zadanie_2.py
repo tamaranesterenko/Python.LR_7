@@ -14,5 +14,5 @@ if __name__ == '__main__':
     print(f"Сумма отрициательных элементов: {sum(b)}")
     d = [x for x in a if c_1 < x < c_2]
     x = len(a) - len(d)
-    d.extend('0'*x)
+    d.extend([0.0]*x)
     print(f"Новый массив: {d}")
